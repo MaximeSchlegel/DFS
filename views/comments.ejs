@@ -1,0 +1,25 @@
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Commentaires</title>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/javascripts/comments_post.js"></script>
+</head>
+
+<body>
+<form>
+    <label for="pseudo">Pseudo :</label>
+    <input id="pseudo" type="text" name="pseudo" <% if (qs.pseudo) { %> value=<%= qs.pseudo %> <% } %> />
+
+    <label for="message">Message :</label>
+    <textarea id="message" placeholder="dites nous tout le bonheur que vous apporte ce site" name="comment">
+        <% if (qs.comment) { %><%= qs.comment %><% } %>
+    </textarea>
+
+    <button type="submit">Envoi</button>
+</form>
+</body>
+
+</html>
