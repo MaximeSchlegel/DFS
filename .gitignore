@@ -1,0 +1,15 @@
+/.idea/
+/logs/
+/node_modules/
+
+/public/node_modules/
+
+
+/*.log
+
+/public/*.log
+
+
+/yarn.lock
+
+/public/yarn.lock
