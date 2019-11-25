@@ -2,11 +2,47 @@
 
 
 /**
+ * Load the configs
+ */
+var config = require('../config/config');
+console.log(config.get('port'));
+
+
+/**
  * Module dependencies.
  */
 var app = require('../app');
 var debug = require('debug')('dfs-cours:server');
 var http = require('http');
+
+
+/**
+ * MongoClient
+ */
+const MongoClient = require('mongodb').MongoClient;
+
+const user = config.get("DB_USER");
+const password = config.get("DB_PASSWORD");
+const db = config.get('db:host');
+const url = `mongodb+srv://${user}:${password}@/test?retryWrites=true&w=majority`;
+
+const client = new MongoClient(url);
+
+client.connect(function(err) {
+  if (err) {
+    console.log("\n");
+    console.log(url + "\n");
+    console.log(user + "\n");
+    console.log(password + "\n");
+    throw err;
+  }
+  console.log("Connected correctly to server");
+
+  client.close();
+});
+
+
+
 
 /**
  * Get port from environment and store in Express.
