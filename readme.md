@@ -7,8 +7,12 @@
 
 Pour gérer différents fichier de conf: https://www.npmjs.com/package/nconf
 
-https://olg.io/blog/2016/config-files-for-nodejs-applications/
+
+https://olg.io/blog/2016/default_config-files-for-nodejs-applications/
 https://github.com/bebraw/node-configuration-patterns
+https://itnext.io/node-js-configuration-and-secrets-management-acd84375ca7
+https://github.com/lorenwest/node-config/wiki/Configuration-Files
+
 
 tuto :
 * https://medium.com/crowdbotics/how-to-build-a-rest-api-with-nodejs-and-postgresql-828c7ec1e8b1

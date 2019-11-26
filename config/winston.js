@@ -1,5 +1,6 @@
 var appRoot = require('app-root-path');
 var winston = require('winston');
+var config = require('index');
 
 
 // define the custom settings for each transport (file, console)

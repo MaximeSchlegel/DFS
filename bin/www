@@ -4,7 +4,7 @@
 /**
  * Load the configs
  */
-var config = require('../config/config');
+var config = require('../config/default_config');
 console.log(config.get('port'));
 
 
@@ -24,7 +24,7 @@ const MongoClient = require('mongodb').MongoClient;
 const user = config.get("DB_USER");
 const password = config.get("DB_PASSWORD");
 const db = config.get('db:host');
-const url = `mongodb+srv://${user}:${password}@/test?retryWrites=true&w=majority`;
+const url = `mongodb+srv://${user}:${password}@clusterdfsromarin-jna6x.mongodb.net/test?retryWrites=true&w=majority`;
 
 const client = new MongoClient(url);
 

@@ -7,8 +7,5 @@
 *.env
 
 /yarn.lock
+/config/local_config.js
 /public/yarn.lock
-
-
-
-

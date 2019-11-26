@@ -1,5 +1,3 @@
-require("dotenv").config({ path: '../.env' });
-
 var faker = require('faker');
 var mongoClient = require('mongodb').MongoClient;
 
@@ -40,12 +38,11 @@ function populateCollection (url, dbName, collection, elementsGenerator, number)
 
 }
 
-const user = process.env.DB_USER;
-const password = process.env.DB_PASSWORD;
-const host = process.env.DB_HOST;
-const url = `mongodb+srv://${user}:${password}@${host}`;
-
-
-populateCollection(url, "nodeapp", "comments", fakeComment, 10);
+// require("dotenv").config({ path: '../.env' });
+// const user = process.env.DB_USER;
+// const password = process.env.DB_PASSWORD;
+// const host = process.env.DB_HOST;
+// const url = `mongodb+srv://${user}:${password}@${host}`;
+// populateCollection(url, "nodeapp", "comments", fakeComment, 10);
 
 module.exports = {populateCollection};
