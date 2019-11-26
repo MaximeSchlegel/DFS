@@ -1,9 +1,17 @@
 const config = {
     database: { //database connection info
         host: 'clusterdfsromarin-jna6x.mongodb.net',
-        port: '27017',
-        name: 'nodeapp',
+        port: '',
+        name: 'nodeapp-dev',
     },
-}
+    winston_options: {
+        file: {
+            level: "warn"
+        },
+        console: {
+            level: "debug"
+        }
+    }
+};
 
-module.exports = config
+module.exports = config;

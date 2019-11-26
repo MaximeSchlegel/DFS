@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-
 /**
  * Load the configs
  */
-var config = require('../config_old/default_config');
-console.log(config.get('port'));
+const config = require("config");
 
 
 /**
@@ -17,43 +15,17 @@ var http = require('http');
 
 
 /**
- * MongoClient
+ * Get port from config and store in Express.
  */
-const MongoClient = require('mongodb').MongoClient;
-
-const user = config.get("DB_USER");
-const password = config.get("DB_PASSWORD");
-const db = config.get('db:host');
-const url = `mongodb+srv://${user}:${password}@clusterdfsromarin-jna6x.mongodb.net/test?retryWrites=true&w=majority`;
-
-const client = new MongoClient(url);
-
-client.connect(function(err) {
-  if (err) {
-    console.log("\n");
-    console.log(url + "\n");
-    console.log(user + "\n");
-    console.log(password + "\n");
-    throw err;
-  }
-  console.log("Connected correctly to server");
-
-  client.close();
-});
-
-
-
-
-/**
- * Get port from environment and store in Express.
- */
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(config.get("server.port") || '3000');
 app.set('port', port);
+
 
 /**
  * Create HTTP server.
  */
 var server = http.createServer(app);
+
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -62,7 +34,7 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-
+/**********************************************************************************************************************/
 /**
  * Normalize a port into a number, string, or false.
  */
@@ -81,6 +53,7 @@ function normalizePort(val) {
 
   return false;
 }
+
 
 /**
  * Event listener for HTTP server "error" event.
@@ -108,6 +81,7 @@ function onError(error) {
       throw error;
   }
 }
+
 
 /**
  * Event listener for HTTP server "listening" event.

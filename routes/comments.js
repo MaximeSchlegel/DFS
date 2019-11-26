@@ -1,6 +1,6 @@
 const express = require('express');
 
-const winston = require('../config_old/winston');
+const winston = require('../logger/winston');
 
 
 const router = express.Router();

@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 
 //import loggers
 var morgan = require('morgan');
-var winston = require('./config_old/winston');
+var winston = require('./logger/winston');
 
 //import our routes
 var indexRouter = require('./routes/index');
