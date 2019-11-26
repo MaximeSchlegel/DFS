@@ -38,7 +38,7 @@ function populateCollection (url, dbName, collection, elementsGenerator, number)
 
 }
 
-// require("dotenv").config({ path: '../.env' });
+// require("dotenv").config_old({ path: '../.env' });
 // const user = process.env.DB_USER;
 // const password = process.env.DB_PASSWORD;
 // const host = process.env.DB_HOST;

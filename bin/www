@@ -4,7 +4,7 @@
 /**
  * Load the configs
  */
-var config = require('../config/default_config');
+var config = require('../config_old/default_config');
 console.log(config.get('port'));
 
 

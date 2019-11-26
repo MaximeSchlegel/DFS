@@ -6,6 +6,12 @@
 *.log
 *.env
 
+/config/local.js
+/config/local-development.js
+/config/local-test.js
+/config/local-production.js
+
 /yarn.lock
-/config/local_config.js
 /public/yarn.lock
+
+/config_old/local_config.js

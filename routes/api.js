@@ -1,6 +1,6 @@
 var express = require('express');
 
-var winston = require('../config/winston');
+var winston = require('../config_old/winston');
 var data = require('../data/data_storage');
 
 
